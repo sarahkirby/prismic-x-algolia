@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 
 import RichText from './RichText';
@@ -58,12 +59,14 @@ const ProductList = ({ products }) => (
     {products?.length ? (
       <Grid>
         {products.map(({ _meta, name, color, hover_image }) => (
-          <div key={_meta.uid}>
-            <Image color={color} image={hover_image.url} />
-            <Title>
-              <RichText text={name} />
-            </Title>
-          </div>
+          <Link key={_meta.uid} href={`/${encodeURIComponent(_meta.uid)}`}>
+            <a>
+              <Image color={color} image={hover_image.url} />
+              <Title>
+                <RichText text={name} />
+              </Title>
+            </a>
+          </Link>
         ))}
       </Grid>
     ) : (
