@@ -1,3 +1,10 @@
-export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+import GlobalStyles from '../src/styles/global';
+
+export default function App({ Component, pageProps }) {
+  return (
+    <>
+      <GlobalStyles />
+      <Component {...pageProps} />
+    </>
+  );
 }
