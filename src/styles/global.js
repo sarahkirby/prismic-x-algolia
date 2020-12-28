@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import colors from './colors';
+
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;900&display=swap');
 
@@ -7,6 +9,8 @@ export default createGlobalStyle`
     width: 100%;
     margin: 0;
     padding: 0;
+    background: ${colors.black};
+    color: ${colors.white};
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
