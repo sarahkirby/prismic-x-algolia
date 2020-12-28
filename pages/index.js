@@ -1,6 +1,6 @@
 import ErrorPage from 'next/error';
 
-import RichText from '../src/components/RichText';
+import ProductList from '../src/components/ProductList';
 
 import { allProducts } from '../src/utils/prismic';
 
@@ -9,13 +9,7 @@ export default function Products({ products }) {
     return <ErrorPage statusCode={404} />;
   }
 
-  return (
-    <>
-      {products?.map(({ name, _meta }) => (
-        <RichText key={_meta.uid} text={name} />
-      ))}
-    </>
-  );
+  return <ProductList products={products} />;
 }
 
 export async function getServerSideProps() {
