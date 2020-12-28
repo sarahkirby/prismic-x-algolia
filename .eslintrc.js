@@ -30,6 +30,8 @@ module.exports = {
     'react/jsx-props-no-spreading': [0],
     'react/jsx-one-expression-per-line': [0],
     'import/no-cycle': [1, { maxDepth: 1 }],
+    'object-curly-newline': 'never',
+    camelcase: 'off',
 
     'react/jsx-wrap-multilines': [0],
 
