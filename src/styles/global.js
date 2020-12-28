@@ -1,11 +1,14 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;900&display=swap');
+
   html, body {
     width: 100%;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
     font-size: 16px;
     line-height: 26px;
     -webkit-font-smoothing: antialiased;
@@ -24,7 +27,7 @@ export default createGlobalStyle`
   h1, h2, h3, h4, h5 {
     margin: 0;
     padding: 0;
-    font-weight: normal;
+    font-weight: 900;
   }
 
   button {
