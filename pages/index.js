@@ -1,15 +1,13 @@
 import ErrorPage from 'next/error';
 
-import ProductList from '../src/components/ProductList';
+import Search from '../src/components/Search';
 
 import { allProducts } from '../src/utils/prismic';
 
 export default function Products({ products }) {
-  if (!products) {
-    return <ErrorPage statusCode={404} />;
-  }
+  if (!products) return <ErrorPage statusCode={404} />;
 
-  return <ProductList products={products} />;
+  return <Search products={products} />;
 }
 
 export async function getServerSideProps() {
