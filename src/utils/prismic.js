@@ -23,6 +23,8 @@ export async function allProducts() {
           edges {
             node {
               name
+              hover_image
+              color
               _meta {
                 uid
               }
